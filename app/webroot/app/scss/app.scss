@@ -1,0 +1,423 @@
+@import "compass/css3";
+@import "settings";
+@import "foundation";
+
+@font-face {
+  font-family: 'gtw';
+  src: url('/fonts/GT-Walsheim-Pro-Trial-Medium.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/GT-Walsheim-Pro-Trial-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/GT-Walsheim-Pro-Trial-Medium.woff') format('woff'), /* Modern Browsers */
+  url('/fonts/GT-Walsheim-Pro-Trial-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/GT-Walsheim-Pro-Trial-Medium.svg#80a02a2e348f88fcc2dfba6fa0f6048e') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+$cock-red: #FF0000;
+
+body {
+  font-family: 'gtw', Helvetica, Arial, sans-serif;
+  background-color: #ECF0F1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.fixed {
+    overflow: hidden;
+  }
+}
+span.secondary {  
+  opacity: 0.3;
+}
+
+nav.top-bar {
+  font-family: 'gtw', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+div#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: red;
+  z-index: 25000;
+  background: white url("/img/bg-wave.png");
+  background-position: 0 50vh;
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+}
+
+div#splash-text {
+  font-family: 'gtw', Helvetica, Arial, sans-serif;
+  position: fixed;
+  top: 15%;
+  left: 0;
+  z-index: 50000;
+  text-align: center;
+  right: 0;
+  font-size: 10vh;
+  color: red;
+  letter-spacing: 1px;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: white;  
+}
+
+:-ms-input-placeholder {  
+  color: white;  
+}
+
+div#login-signup {
+  font-family: 'gtw', Helvetica, Arial, sans-serif;
+  z-index: 70000;
+  position: fixed;
+  right: 0;
+  bottom: 10vh;
+  text-align: center;
+  left: 0;
+  letter-spacing: 1px;
+  color: white;
+
+  a {
+    color: white;
+  }
+
+  button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  input {
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 2em;
+    text-align: center;
+    font-size: 1.4em;
+
+    &:focus {
+      ::-webkit-input-placeholder {
+        color: rgba(255,255,255,0.1);
+      }
+
+      :-moz-placeholder { /* Firefox 18- */
+        color: rgba(255,255,255,0.1);  
+      }
+
+      ::-moz-placeholder {  /* Firefox 19+ */
+        color: rgba(255,255,255,0.1);  
+      }
+
+      :-ms-input-placeholder {  
+        color: rgba(255,255,255,0.1);  
+      }
+    }
+  }
+}
+
+div.loader-item {
+  display: none;
+}
+
+#new-img-target {
+  display: block;
+  margin: 0 auto;
+  max-width: 900px;
+  max-width: 90vw;
+  max-height: 65vh;
+  -webkit-border-radius: 900px;
+  -moz-border-radius: 900px;
+  border-radius: 900px;
+}
+
+div.loader-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 65000;
+}
+
+div.loader {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  -webkit-animation: loading .7s infinite alternate;
+  margin-top: 25vh;
+  z-index: 65001;
+}
+
+div.loader-text {
+  font-family: 'gtw', Helvetica, Arial, sans-serif;
+  position: fixed;
+  top: 10vh;
+  z-index: 65001;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 2em;
+  color: $cock-red;
+
+}
+
+div.loader-progress {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 65002;
+  > div {
+    width: 0%;
+    height: 100%;
+    margin: 0 auto;
+    background: darken($cock-red, 0%);
+    -webkit-transition: width .3s ease-in;
+    -moz-transition: width .3s ease-in;
+    transition: width .3s ease-in;
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+  }
+}
+
+div#content {
+  padding-top: 125px;
+}
+
+div.photo-panel {
+  div.photo-image {
+  }
+  div.photo-meta {
+    margin-top: 2rem;
+
+    h4.score {
+      font-size: 1.4rem;
+      @media all and (min-width: 750px) {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+div#add-photo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FF0000; // #2C3E50;
+  color: white;
+  text-align: center;
+
+  i {
+    font-size: 2.5em;
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  div.submit, input[type="file"] {
+    display: none;
+  }
+}
+
+img.unveil {
+  width: 100%;
+  opacity: 0;
+  transition: opacity .3s ease-in;
+
+  &.min-height {
+    min-height: 200px;
+  }
+}
+
+span.red {
+  color: $cock-red;
+}
+
+div#result-panel-wrapper {
+  display: none;
+}
+
+div#result-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 70000;
+  color: $cock-red;
+  background: rgba(255,255,255,0.3);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  line-height: 3;
+  button {
+    border: 2px solid $cock-red;
+    background: none;
+    color: $cock-red;
+  }
+}
+
+// no bold for emoji
+.hel {
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+
+.hell {
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-weight: bold !important;
+}
+
+div#worst-wave {
+  background-image: url('/img/bg-wave.png');
+  background-position: top;
+  background-repeat: repeat-x;
+  padding-top: 6em;
+  margin-top: 3em;
+}
+div#worst {
+  background: red;
+  padding-bottom: 125px;
+}
+
+form#UserProfileForm , div#validate-form {
+  input[type="submit"] {
+    width: 100%;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    padding: 1em 0;
+  }
+
+  fieldset {
+    border: 2px solid $cock-red;
+    
+    p, legend, label {
+      color: $cock-red;
+    }
+    input {
+      background: none;
+      color: $cock-red;
+      border: 2px solid $cock-red;
+    }
+  }
+
+  margin-bottom: 3em;
+}
+
+#profile-photos {
+  margin-bottom: 125px;
+}
+
+div#profile-editor {
+  display: none;
+}
+
+div.profile-header {
+  text-align: center;
+  margin-bottom: 3em;
+
+  color: $cock-red;
+  h2 {
+    font-size: 6em;
+  }
+  h2, h4, h5 {
+    color: $cock-red;
+  }
+
+  div.actions {
+    margin-top: 2em;
+    font-size: 0.8rem;
+  }
+
+  &.white {
+    h2, h4, h5 {
+      color: white;
+    }
+  }
+}
+
+div.flipped {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+  margin-top: 2em;
+}
+
+div.tags {
+  margin-top: 1em !important;
+  display: none;
+}
+
+div.tags a {
+  border: 1px solid $cock-red;
+  display: inline-block;
+  padding: 0.5em;
+  font-size: 0.85em;
+  margin-bottom: 0.5em;
+}
+
+div.tag-count-circle {
+  background: $cock-red;
+  color: white;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+@media #{$small-only} {
+  div#splash-text {
+    top: 7%;
+  }
+  div#splash {
+    background-position: 0 25vh;
+  }
+
+  div#login-signup {
+    bottom: 5vh;
+  }
+  div#login-signup input {
+    padding: 1.5em;
+    font-size: 1em;
+  }
+  h2#profile-username {
+    font-size: 2.5em;
+  }
+}
+
+
+#flashMessage {
+  text-align: center;
+  color: $cock-red;
+}

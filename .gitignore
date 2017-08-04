@@ -1,0 +1,12 @@
+app/Config/bootstrap.php
+app/Config/database.php
+app/Config/email.php
+app/tmp/
+.DS_Store
+app/Controller/AppController.php
+bower_components
+node_modules
+.sass-cache
+app/webroot/public/app.js.map
+app/webroot/public/libraries.js.map
+app/webroot/public/app.css.map
