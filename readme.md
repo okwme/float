@@ -1,8 +1,8 @@
 # Float
 
 
-![upload](https://github.com/okwme/float-photo/blob/master/app/webroot/img/upload.gif?raw=true)
-![scroll](https://github.com/okwme/float-photo/blob/master/app/webroot/img/scroll.gif?raw=true)
+![upload](https://github.com/okwme/float/blob/master/app/webroot/img/upload.gif?raw=true)
+![scroll](https://github.com/okwme/float/blob/master/app/webroot/img/scroll.gif?raw=true)
 
 [Photo Hack Day #4 ](https://photohackday.devpost.com/), Berlin 2015
 
