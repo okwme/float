@@ -1,0 +1,17 @@
+{
+  "name": "floatr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "brunch": "^2.0.1",
+    "css-brunch": "^1.7.0",
+    "javascript-brunch": "^1.8.0",
+    "sass-brunch": "^1.9.2"
+  }
+}
